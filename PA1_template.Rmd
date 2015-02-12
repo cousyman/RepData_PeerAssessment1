@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: "Assessment1"
 output: html_document
 ---
@@ -12,7 +11,7 @@ We are looking at activity monitoring data and will create summary statistics an
 First, we load the data in.
 
 ```{r}
-data <- read.csv('S:/Mitchell/Coursera/RepData/Assess1/activity.csv')
+data <- read.csv('S:/Mitchell/Coursera/RepData/RepData_PeerAssessment1/activity.csv')
 ```
 
 Now, we look to answer the first question. 
