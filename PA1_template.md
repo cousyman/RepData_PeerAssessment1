@@ -12,7 +12,7 @@ First, we load the data in.
 
 
 ```r
-data <- read.csv('S:/Mitchell/Coursera/RepData/Assess1/activity.csv')
+data <- read.csv('S:/Mitchell/Coursera/RepData/RepData_PeerAssessment1/activity.csv')
 ```
 
 Now, we look to answer the first question. 
@@ -123,7 +123,10 @@ data <- mutate(data, newstep = tapply(steps, interval,mean,na.rm=T))
 filleddata <- data[,1:3]
 filleddata$steps <- ifelse(is.na(data$step), data$newstep,data$steps)
 
-#Make a histogram of the total number of steps taken each day and calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impacct of imputing missing data on the estimateas of the total daily number of steps?
+#Make a histogram of the total number of steps taken each day and calculate and report the
+#mean and median total number of steps taken per day. Do these values differ from the
+#estimates from the first part of the assignment? What is the impact of imputing missing
+#data on the estimateas of the total daily number of steps?
 daydata$filledsum <- tapply(filleddata$steps, filleddata$date,sum,na.rm=T)
 hist(daydata$filledsum)
 ```
@@ -190,7 +193,4 @@ xyplot(steps ~ interval | weekend, data=weekendavg, layout=c(1,2),type='l')
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 ##This completes the assignment!!!
-
-
-
 
